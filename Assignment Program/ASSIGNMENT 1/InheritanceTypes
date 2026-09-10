@@ -1,0 +1,67 @@
+package assignment;
+class Employee {
+    void work() {
+        System.out.println("Employee is working");
+    }
+}
+
+// Single Inheritance
+class Developer extends Employee {
+    void code() {
+        System.out.println("Developer writes code");
+    }
+}
+
+// Multilevel Inheritance
+class SeniorDeveloper extends Developer {
+    void manage() {
+        System.out.println("Senior Developer manages the team");
+    }
+}
+
+// Hierarchical Inheritance
+class Designer extends Employee {
+    void design() {
+        System.out.println("Designer creates designs");
+    }
+}
+
+// Multiple Inheritance using Interfaces
+interface Teacher {
+    void teach();
+}
+
+interface Researcher {
+    void research();
+}
+
+class Professor implements Teacher, Researcher {
+    public void teach() {
+        System.out.println("Professor teaches students");
+    }
+
+    public void research() {
+        System.out.println("Professor does research");
+    }
+}
+public class InheritanceTypes {
+    public static void main(String[] args) {
+
+        Developer d = new Developer();
+        d.work();
+        d.code();
+
+        SeniorDeveloper sd = new SeniorDeveloper();
+        sd.work();
+        sd.code();
+        sd.manage();
+
+        Designer ds = new Designer();
+        ds.work();
+        ds.design();
+
+        Professor p = new Professor();
+        p.teach();
+        p.research();
+    }
+}
