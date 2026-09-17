@@ -1,23 +1,33 @@
-package myprogs.basics;
+package practice;
 
 public class ConDemo {
-	int rollNo;
-	String name;
-	
-//	constructor
-	public ConDemo() {
-		this.rollNo = 1234;
-		this.name = "Suresh";
-		System.out.println("Variables are ready");
-	}
-	
-	void showDetails() {
-		System.out.println("My rollNo is: " + rollNo);
-		System.out.println("My name is: " + name);
-	}
-	
-	public static void main(String[] args) {
-		ConDemo cd = new ConDemo(); //constr call
-		cd.showDetails();
-	}
+    String name;
+    int rollNo;
+
+    public ConDemo(){
+        this.name="Radha";
+        this.rollNo=290;
+    }
+
+    public ConDemo(String s, int i){
+        this.name=s;
+        this.rollNo=i;
+    }
+
+    public void sample(){
+        System.out.println(name);
+        System.out.println(rollNo);
+    }
+
+    public void samp(){
+        System.out.println(this.name);
+        System.out.println(this.rollNo);
+    }
+
+    public static void  main(String[] args){
+        ConDemo cd= new ConDemo();
+        cd.sample();
+        ConDemo c= new ConDemo("Krushn",291);
+        c.samp();
+    }
 }
